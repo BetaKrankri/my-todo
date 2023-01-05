@@ -8,10 +8,11 @@ body {
 }
 
 :root {
-  --dark15: hsl(0, 0%, 15%);
-  --dark30: hsl(0, 0%, 30%);
-  --dark45: hsl(0, 0%, 45%);
-  --dark60: hsl(0, 0%, 60%);
-  --dark75: hsl(0, 0%, 75%);
-  --dark90: hsl(0, 0%, 90%);
+  
+  --light15: hsl(0, 0%, 15%);
+  --light30: hsl(0, 0%, 30%);
+  --light45: hsl(0, 0%, 45%);
+  --light60: hsl(0, 0%, 60%);
+  --light75: hsl(0, 0%, 75%);
+  --light90: hsl(0, 0%, 90%);
 }
