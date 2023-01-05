@@ -1,0 +1,10 @@
+.AddBar {
+    border: solid 1px green;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+    min-height: 10px;
+}

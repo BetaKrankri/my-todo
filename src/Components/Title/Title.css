@@ -1,0 +1,10 @@
+.Title {
+    /* border: 1px solid red; */
+    
+    box-sizing: border-box;
+    display: inline;
+    padding: 10px;
+
+    font-size: 2rem;
+    font-weight: 600;
+}
