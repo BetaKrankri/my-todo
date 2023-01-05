@@ -18,7 +18,7 @@ function AddBar({
             <input
                 onChange={onChange}
                 type='text'
-                placeholder='Add a new Task' />
+                placeholder='Add a new ToDo' />
 
         </div>
     );
