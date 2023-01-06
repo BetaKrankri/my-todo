@@ -8,20 +8,21 @@ import Button from '../Button/Button';
 
 
 function ToDoCard({
-    todo = 'A To Do goes here'
+    task = 'A To Do goes here',
+    onDelete
 } = {}) {
     return (
         <div className='ToDoCard'>
-            <Checkbox />
+            <Checkbox onToggle={() => {}}/>
 
             <div className='toDoLabel'>
-                <p>{todo}</p>
+                <p>{task.text}</p>
             </div>
 
             <Button
-                actionIcon={'Delete'}
-                size={'lg'}
-                onClick={() => { }}
+                actionIcon='Delete'
+                size='lg'
+                onClick={onDelete}
             />
         </div>
     );
