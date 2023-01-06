@@ -20,3 +20,7 @@
 .toDoLabel {
     flex-grow: 1;
 }
+
+.toDoLabel p[data-done=true] {
+    text-decoration:line-through;
+}

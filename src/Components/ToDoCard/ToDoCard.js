@@ -14,20 +14,20 @@ function ToDoCard({
 } = {}) {
     return (
         <div className='ToDoCard'>
-            <Checkbox 
+            <Checkbox
                 onToggle={() => {
                     onToggle(task.id)
-                }} 
-                isDone={task.done}/>
+                }}
+                isDone={task.done} />
 
             <div className='toDoLabel'>
-                <p>{task.text}</p>
+                <p data-done={(task.done)} >{task.text}</p>
             </div>
 
             <Button
                 actionIcon='Delete'
                 size='lg'
-                onClick={() => { onDelete(task.id)}}
+                onClick={() => { onDelete(task.id) }}
             />
         </div>
     );
