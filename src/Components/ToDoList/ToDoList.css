@@ -7,7 +7,7 @@
     min-width: 300px;
     max-width: 500px;
     max-height: 70vh;
-    min-height: 50vh; /* delete later */
+    height: 50vh; /* delete later */
 
     display: flex;
     flex-direction: column;

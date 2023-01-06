@@ -33,6 +33,12 @@ function ToDoCard({
     );
 }
 
+ToDoCard.prtopTypes = {
+    task: PropTypes.string,
+    onDelete: PropTypes.func,
+    onToggle: PropTypes.func
+}
+
 export default ToDoCard;
 
 
