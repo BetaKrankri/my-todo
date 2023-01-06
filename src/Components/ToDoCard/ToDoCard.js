@@ -8,12 +8,16 @@ import Button from '../Button/Button';
 
 
 function ToDoCard({
-
-}) {
+    todo = 'A To Do goes here'
+} = {}) {
     return (
         <div className='ToDoCard'>
             <Checkbox />
-            {/* <ToDo /> */}
+
+            <div className='toDoLabel'>
+                <p>{todo}</p>
+            </div>
+
             <Button
                 actionIcon={'Delete'}
                 size={'lg'}
