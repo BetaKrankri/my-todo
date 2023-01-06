@@ -13,6 +13,7 @@ import mockup from '../../util/mockup-data.js'
 function App() {
 
   const [tasksList, setTasksList] = useState(mockup);
+  const [input, setInput] = useState('');
 
   function switchDoneTask(taskId) {
     setTasksList(tasksList.map(task => {
@@ -28,6 +29,20 @@ function App() {
     setTasksList(tasksList.filter(task => task.id !== taskId));
   }
 
+  function handleChange({ target }) { 
+    setInput(target.value);
+  }
+
+  function addTask() {
+    if(!input.trim()) return;
+    setTasksList(prev => [...prev, {
+      id: randomId(),
+      text: input,
+      done: false
+    }]);
+    setInput('');
+  }
+
   return (
     <div className='App'>
       <Title text='My To Do List' />
@@ -36,9 +51,17 @@ function App() {
         onToggle={switchDoneTask}
         tasksList={tasksList}
       />
-      <AddBar onChange={() => { }} onAdd={() => { }} />
+      <AddBar
+        input={input}
+        onChange={handleChange}
+        onAdd={addTask}
+      />
     </div>
   );
+}
+
+function randomId() {
+  return Math.floor(Math.random() * 10000 + 100);
 }
 
 export default App;

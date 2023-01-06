@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 
 function AddBar({
+    input,
     onChange,
     onAdd
 }) {
@@ -16,10 +17,14 @@ function AddBar({
                 actionIcon='Add'
                 onClick={onAdd} />
             <input
-                onChange={onChange}
                 type='text'
-                placeholder='Add a new ToDo' />
-
+                placeholder='Add a new ToDo'
+                value={input}
+                onChange={onChange}
+                onKeyDown={(e) => {
+                    if (e.key === 'Enter') onAdd();
+                }}
+            />
         </div>
     );
 }
