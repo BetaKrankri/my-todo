@@ -24,11 +24,15 @@ function App() {
     }));
   }
 
+  function deleteTask(taskId) {
+    setTasksList(tasksList.filter(task => task.id !== taskId));
+  }
+
   return (
     <div className='App'>
       <Title text='My To Do List' />
       <ToDoList
-        onDelete={() => { }}
+        onDelete={deleteTask}
         onToggle={switchDoneTask}
         tasksList={tasksList}
       />

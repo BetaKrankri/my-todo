@@ -27,7 +27,7 @@ function ToDoCard({
             <Button
                 actionIcon='Delete'
                 size='lg'
-                onClick={onDelete}
+                onClick={() => { onDelete(task.id)}}
             />
         </div>
     );
