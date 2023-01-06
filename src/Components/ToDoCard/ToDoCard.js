@@ -14,7 +14,11 @@ function ToDoCard({
 } = {}) {
     return (
         <div className='ToDoCard'>
-            <Checkbox onToggle={onToggle} isDone={task.done}/>
+            <Checkbox 
+                onToggle={() => {
+                    onToggle(task.id)
+                }} 
+                isDone={task.done}/>
 
             <div className='toDoLabel'>
                 <p>{task.text}</p>

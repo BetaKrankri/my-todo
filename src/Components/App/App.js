@@ -14,13 +14,22 @@ function App() {
 
   const [tasksList, setTasksList] = useState(mockup);
 
-  return (
+  function switchDoneTask(taskId) {
+    setTasksList(tasksList.map(task => {
+      if (task.id === taskId) {
+        let n = { ...task, done: !task.done }
+        return n;
+      }
+      return task;
+    }));
+  }
 
+  return (
     <div className='App'>
       <Title text='My To Do List' />
       <ToDoList
         onDelete={() => { }}
-        onToggle={() => { }}
+        onToggle={switchDoneTask}
         tasksList={tasksList}
       />
       <AddBar onChange={() => { }} onAdd={() => { }} />
