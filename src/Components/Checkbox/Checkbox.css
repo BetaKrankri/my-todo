@@ -1,0 +1,42 @@
+.Checkbox {
+    box-sizing: border-box;
+    position: relative;
+    width: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Checkbox::after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.cb {
+    position: absolute;
+    appearance: none;
+    margin: 0;
+
+    /* New appearance*/
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+
+    border-radius: 20px;
+    outline: solid 2px var(--light0);
+}
+
+.cb:checked {
+    background-color: var(--light15);
+}
+
+.cb:hover {
+    outline: solid 2px var(--light30);
+}
+
+.cb:active {
+    outline: solid 2px var(--light60);
+    
+}

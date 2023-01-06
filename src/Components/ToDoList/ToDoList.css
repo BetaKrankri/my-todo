@@ -1,0 +1,31 @@
+.ToDoList {
+    /* border: dashed rgba(255, 255, 0, 0.288) 2px ; */
+    border-radius: 10px;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+    max-height: 70vh;
+    min-height: 50vh; /* delete later */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    overflow-y: scroll;
+}
+
+
+.ToDoList::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.ToDoList {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}

@@ -1,5 +1,5 @@
 .AddBar {
-    border: solid 1px green;
+    border: solid 1px black;
     border-radius: 10px;
 
     box-sizing: border-box;
@@ -7,4 +7,26 @@
     min-width: 300px;
     max-width: 500px;
     min-height: 10px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 5px 20px;
+}
+
+.AddBar:hover, .AddBar:focus-within {
+    box-shadow: 0 0 1px 1px var(--light30);
+}
+
+
+
+.AddBar input {
+    font-size: 1rem;
+    flex-grow: 1;
+    border: none;
+}
+
+.AddBar input:focus {
+    outline: none;
 }
