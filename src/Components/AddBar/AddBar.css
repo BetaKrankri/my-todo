@@ -16,7 +16,7 @@
 }
 
 .AddBar:hover, .AddBar:focus-within {
-    box-shadow: 0 0 5px 1px var(--light30);
+    box-shadow: 0 0 1px 1px var(--light30);
 }
 
 

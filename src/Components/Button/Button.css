@@ -3,7 +3,7 @@
     display: inline;
     position: relative;
     width: 40px;
-    color: black;
+    color: var(--light0);
 }
 
 .Button::after {
