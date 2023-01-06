@@ -7,15 +7,18 @@ import ToDoCard from '../ToDoCard/ToDoCard';
 
 function ToDoList({
     tasksList = [],
-    onDelete
+    onDelete,
+    onToggle,
 } = {}) {
 
     return (
         <div className='ToDoList'>
             {tasksList.map(task => (
                 <ToDoCard
+                    key={task.id}
                     task={task}
-                    onDelete={onDelete} />
+                    onDelete={onDelete}
+                    onToggle={onToggle} />
             ))}
         </div>
     );
@@ -27,6 +30,8 @@ function ToDoList({
 ToDoList.propTypes = {
     todos: PropTypes.array,
     onDelete: PropTypes.func,
+    onToggle: PropTypes.func,
+
 }
 
 export default ToDoList;

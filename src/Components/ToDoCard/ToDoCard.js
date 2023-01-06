@@ -9,11 +9,12 @@ import Button from '../Button/Button';
 
 function ToDoCard({
     task = 'A To Do goes here',
-    onDelete
+    onDelete,
+    onToggle
 } = {}) {
     return (
         <div className='ToDoCard'>
-            <Checkbox onToggle={() => {}}/>
+            <Checkbox onToggle={onToggle} isDone={task.done}/>
 
             <div className='toDoLabel'>
                 <p>{task.text}</p>

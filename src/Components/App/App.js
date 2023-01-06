@@ -20,7 +20,7 @@ function App() {
       <Title text='My To Do List' />
       <ToDoList
         onDelete={() => { }}
-        onToggleCheck={() => { }}
+        onToggle={() => { }}
         tasksList={tasksList}
       />
       <AddBar onChange={() => { }} onAdd={() => { }} />
