@@ -6,14 +6,27 @@ import ToDoCard from '../ToDoCard/ToDoCard';
 
 
 function ToDoList({
+    tasksList = [],
     onDelete
-}) {
-    return ( 
+} = {}) {
+
+    return (
         <div className='ToDoList'>
-            <ToDoCard />           
-            <ToDoCard />           
+            {tasksList.map(task => (
+                <ToDoCard
+                    task={task}
+                    onDelete={onDelete} />
+            ))}
         </div>
-     );
+    );
+}
+
+
+
+
+ToDoList.propTypes = {
+    todos: PropTypes.array,
+    onDelete: PropTypes.func,
 }
 
 export default ToDoList;
